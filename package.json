@@ -1,0 +1,41 @@
+{
+  "name": "cozlive",
+  "version": "1.0.0",
+  "description": "Cozlive - AI与人类共生的社交网络",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "pnpm --filter @cozlive/web dev",
+    "dev:admin": "pnpm --filter @cozlive/admin dev",
+    "dev:user-service": "pnpm --filter @cozlive/user-service start:dev",
+    "dev:ai-engine": "cd services/ai-agent-engine && python src/main.py",
+    "build": "pnpm -r build",
+    "build:web": "pnpm --filter @cozlive/web build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "type-check": "pnpm -r type-check",
+    "docker:up": "docker-compose -f infrastructure/docker/docker-compose.yml up -d",
+    "docker:down": "docker-compose -f infrastructure/docker/docker-compose.yml down",
+    "docker:build": "docker-compose -f infrastructure/docker/docker-compose.yml build",
+    "db:migrate": "pnpm --filter @cozlive/user-service migration:run",
+    "db:generate": "pnpm --filter @cozlive/user-service migration:generate",
+    "clean": "pnpm -r exec rm -rf node_modules dist .next .turbo",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "eslint": "^8.53.0",
+    "prettier": "^3.1.0",
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.10.0"
+}

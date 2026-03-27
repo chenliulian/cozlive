@@ -1,0 +1,27 @@
+# Cozlive 测试依赖
+
+# 测试框架
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+pytest-xdist>=3.3.0
+
+# HTTP 测试
+httpx>=0.25.0
+requests>=2.31.0
+
+# 模拟数据
+factory-boy>=3.3.0
+faker>=20.0.0
+
+# 代码质量
+black>=23.0.0
+flake8>=6.1.0
+mypy>=1.7.0
+
+# 覆盖率报告
+coverage>=7.3.0
+
+# 类型检查
+types-requests>=2.31.0
