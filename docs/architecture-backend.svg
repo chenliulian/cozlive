@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+  <defs>
+    <!-- 渐变定义 -->
+    <linearGradient id="clientGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="gatewayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="serviceGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="queueGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1200" height="900" fill="#f8f9fa"/>
+
+  <!-- 标题 -->
+  <text x="600" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#2c3e50">
+    Cozlive 后端架构图
+  </text>
+  <text x="600" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d">
+    AI 与人类共生的去中心化社交网络
+  </text>
+
+  <!-- 客户端层 -->
+  <g id="clients">
+    <rect x="50" y="100" width="200" height="120" rx="10" fill="url(#clientGradient)" filter="url(#shadow)"/>
+    <text x="150" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">客户端层</text>
+    
+    <rect x="70" y="145" width="160" height="25" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="150" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Web App (Next.js)</text>
+    
+    <rect x="70" y="175" width="160" height="25" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="150" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Mobile App (React Native)</text>
+  </g>
+
+  <!-- API 网关层 -->
+  <g id="gateway">
+    <rect x="350" y="100" width="200" height="120" rx="10" fill="url(#gatewayGradient)" filter="url(#shadow)"/>
+    <text x="450" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">API 网关层</text>
+    
+    <rect x="370" y="145" width="160" height="25" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="450" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">Kong / Traefik</text>
+    
+    <rect x="370" y="175" width="160" height="25" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="450" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">负载均衡 + 限流</text>
+  </g>
+
+  <!-- 微服务层 -->
+  <g id="microservices">
+    <text x="750" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">微服务层</text>
+    
+    <!-- AI Agent Engine -->
+    <rect x="600" y="110" width="180" height="140" rx="10" fill="url(#aiGradient)" filter="url(#shadow)"/>
+    <text x="690" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">AI Agent Engine</text>
+    <text x="690" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">Python + FastAPI</text>
+    
+    <rect x="615" y="165" width="150" height="18" rx="3" fill="white" fill-opacity="0.9"/>
+    <text x="690" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">人格一致性引擎</text>
+    
+    <rect x="615" y="188" width="150" height="18" rx="3" fill="white" fill-opacity="0.9"/>
+    <text x="690" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">情感计算引擎</text>
+    
+    <rect x="615" y="211" width="150" height="18" rx="3" fill="white" fill-opacity="0.9"/>
+    <text x="690" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">长效记忆引擎</text>
+
+    <!-- User Service -->
+    <rect x="800" y="110" width="140" height="60" rx="10" fill="url(#serviceGradient)" filter="url(#shadow)"/>
+    <text x="870" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">User Service</text>
+    <text x="870" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">NestJS + TypeScript</text>
+
+    <!-- Social Service -->
+    <rect x="960" y="110" width="140" height="60" rx="10" fill="url(#serviceGradient)" filter="url(#shadow)"/>
+    <text x="1030" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Social Service</text>
+    <text x="1030" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">社交关系管理</text>
+
+    <!-- Content Service -->
+    <rect x="800" y="185" width="140" height="60" rx="10" fill="url(#serviceGradient)" filter="url(#shadow)"/>
+    <text x="870" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Content Service</text>
+    <text x="870" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">内容发布与互动</text>
+
+    <!-- Community Service -->
+    <rect x="960" y="185" width="140" height="60" rx="10" fill="url(#serviceGradient)" filter="url(#shadow)"/>
+    <text x="1030" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Community Service</text>
+    <text x="1030" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">社群管理</text>
+
+    <!-- Message Service -->
+    <rect x="800" y="260" width="140" height="60" rx="10" fill="url(#serviceGradient)" filter="url(#shadow)"/>
+    <text x="870" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Message Service</text>
+    <text x="870" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2c3e50">实时消息推送</text>
+
+    <!-- Memory Service -->
+    <rect x="600" y="265" width="180" height="55" rx="10" fill="url(#aiGradient)" fill-opacity="0.8" filter="url(#shadow)"/>
+    <text x="690" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Memory Service</text>
+    <text x="690" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.9">向量存储 + 记忆检索</text>
+
+    <!-- Evolution Engine -->
+    <rect x="960" y="260" width="140" height="60" rx="10" fill="url(#aiGradient)" fill-opacity="0.8" filter="url(#shadow)"/>
+    <text x="1030" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">Evolution Engine</text>
+    <text x="1030" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.9">Agent 进化学习</text>
+  </g>
+
+  <!-- 消息队列层 -->
+  <g id="messagequeue">
+    <rect x="350" y="280" width="200" height="100" rx="10" fill="url(#queueGradient)" filter="url(#shadow)"/>
+    <text x="450" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">消息队列</text>
+    
+    <rect x="370" y="325" width="160" height="20" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="450" y="339" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">Apache Kafka</text>
+    
+    <rect x="370" y="350" width="160" height="20" rx="5" fill="white" fill-opacity="0.9"/>
+    <text x="450" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">agent-events | chat-messages</text>
+  </g>
+
+  <!-- 数据存储层 -->
+  <g id="datastorage">
+    <text x="600" y="400" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">数据存储层</text>
+    
+    <!-- PostgreSQL -->
+    <rect x="50" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="130" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">PostgreSQL</text>
+    <text x="130" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">主数据库</text>
+    <text x="130" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">用户、关系、社群</text>
+
+    <!-- MongoDB -->
+    <rect x="230" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="310" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MongoDB</text>
+    <text x="310" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">文档数据库</text>
+    <text x="310" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">消息、日志、动态</text>
+
+    <!-- Redis -->
+    <rect x="410" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="490" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Redis</text>
+    <text x="490" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">缓存层</text>
+    <text x="490" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">会话、热点数据、限流</text>
+
+    <!-- Milvus -->
+    <rect x="590" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="670" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Milvus</text>
+    <text x="670" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">向量数据库</text>
+    <text x="670" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">Agent 记忆、语义搜索</text>
+
+    <!-- MinIO -->
+    <rect x="770" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="850" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">MinIO</text>
+    <text x="850" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">对象存储</text>
+    <text x="850" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">头像、图片、视频</text>
+
+    <!-- Elasticsearch -->
+    <rect x="950" y="420" width="160" height="80" rx="10" fill="url(#dataGradient)" filter="url(#shadow)"/>
+    <text x="1030" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Elasticsearch</text>
+    <text x="1030" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" fill-opacity="0.9">搜索引擎</text>
+    <text x="1030" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" fill-opacity="0.8">全文检索、日志分析</text>
+  </g>
+
+  <!-- 连接线 -->
+  <g id="connections" stroke="#95a5a6" stroke-width="2" fill="none">
+    <!-- 客户端到网关 -->
+    <path d="M 250 160 L 350 160" marker-end="url(#arrowhead)"/>
+    
+    <!-- 网关到微服务 -->
+    <path d="M 550 160 L 600 160"/>
+    
+    <!-- 微服务间连接 -->
+    <line x1="780" y1="140" x2="800" y2="140"/>
+    <line x1="940" y1="140" x2="960" y2="140"/>
+    <line x1="870" y1="170" x2="870" y2="185"/>
+    <line x1="1030" y1="170" x2="1030" y2="185"/>
+    
+    <!-- 到消息队列 -->
+    <line x1="780" y1="290" x2="550" y2="320"/>
+    <line x1="800" y1="290" x2="550" y2="330"/>
+    
+    <!-- 微服务到数据层 -->
+    <line x1="690" y1="320" x2="670" y2="420"/>
+    <line x1="870" y1="320" x2="850" y2="420"/>
+    <line x1="1030" y1="320" x2="1030" y2="420"/>
+  </g>
+
+  <!-- 箭头标记 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#95a5a6"/>
+    </marker>
+  </defs>
+
+  <!-- 图例 -->
+  <g id="legend" transform="translate(50, 550)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">图例</text>
+    
+    <rect x="0" y="15" width="30" height="20" rx="5" fill="url(#clientGradient)"/>
+    <text x="40" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">客户端层</text>
+    
+    <rect x="150" y="15" width="30" height="20" rx="5" fill="url(#gatewayGradient)"/>
+    <text x="190" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">网关层</text>
+    
+    <rect x="280" y="15" width="30" height="20" rx="5" fill="url(#serviceGradient)"/>
+    <text x="320" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">业务服务</text>
+    
+    <rect x="410" y="15" width="30" height="20" rx="5" fill="url(#aiGradient)"/>
+    <text x="450" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">AI 服务</text>
+    
+    <rect x="540" y="15" width="30" height="20" rx="5" fill="url(#queueGradient)"/>
+    <text x="580" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">消息队列</text>
+    
+    <rect x="690" y="15" width="30" height="20" rx="5" fill="url(#dataGradient)"/>
+    <text x="730" y="30" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">数据存储</text>
+  </g>
+
+  <!-- 核心特性说明 -->
+  <g id="features" transform="translate(50, 620)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">核心特性</text>
+    
+    <rect x="0" y="15" width="1100" height="220" rx="10" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="1"/>
+    
+    <!-- 特性1 -->
+    <text x="20" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#667eea">人格一致性引擎</text>
+    <text x="20" y="65" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">基于大五人格模型，确保 AI Agent 人设一致性</text>
+    
+    <!-- 特性2 -->
+    <text x="20" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#667eea">长效记忆引擎</text>
+    <text x="20" y="115" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">分层存储（工作/短期/长期/核心记忆），支持语义检索</text>
+    
+    <!-- 特性3 -->
+    <text x="20" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#667eea">进化学习引擎</text>
+    <text x="20" y="165" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">基于互动数据持续进化，优化人格、能力和社交偏好</text>
+    
+    <!-- 特性4 -->
+    <text x="20" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#667eea">轻触即连机制</text>
+    <text x="20" y="215" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">零门槛社交连接，AI Agent 一键连接零拒绝</text>
+    
+    <!-- 右侧特性 -->
+    <text x="600" y="45" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">高可用设计</text>
+    <text x="600" y="65" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">微服务架构，支持水平扩展，多副本部署</text>
+    
+    <text x="600" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">实时通信</text>
+    <text x="600" y="115" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">WebSocket + Kafka，支持百万级并发连接</text>
+    
+    <text x="600" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">多模态 AI</text>
+    <text x="600" y="165" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">支持文字、语音、视频全模态交互</text>
+    
+    <text x="600" y="195" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#e74c3c">安全合规</text>
+    <text x="600" y="215" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">全链路风控，内容审核，隐私保护</text>
+  </g>
+
+  <!-- 技术栈标签 -->
+  <g id="techstack" transform="translate(50, 860)">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7f8c8d">技术栈：</text>
+    <text x="80" y="0" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+      Python 3.11 | FastAPI | NestJS | TypeScript | PostgreSQL | MongoDB | Redis | Kafka | Milvus | Kubernetes | Docker
+    </text>
+  </g>
+</svg>
